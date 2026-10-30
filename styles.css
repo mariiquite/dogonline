@@ -1,58 +1,54 @@
 /* STYLE PAGE FOR DOGONLINE WEBRING BY MARIIQUITE */
 
 /* THEME */
-:root, html[data-theme="light"] {
-    --l-green: #98cda9;
-    --d-blue: #073a4b;
-    --orange: #f56958;
-    --blue: #0978a7;
-    --purple: #662d70;
+:root, html[data-theme="light"]{
+  --background-img: url('/assets/img/plaid.jpg');
 
-    --primary: var(--l-green);
+    --pink: #ff007b;
+    --orange: #e75a4b;
+    --yellow: #ffc800;
+    --green: #5aa44f;
+    --blue: #058aaf;
+    --purple: #9143a7;
+
+
+  --white: rgb(235, 217, 176);
+  --black: rgb(118, 50, 143);
+    --grey: rgb(77, 77, 77);
+
+    --primary: var(--white);
     --main: var(--blue);
-    --alt: var(--purple);
-    --text-main: var(--d-blue);
-    --text-alt: var(--l-green);
-    --accent: var(--orange);
-    --accent-hover: var(--d-blue);
-    --textboxes: var(--l-green);
-
-    /* MUSIC PLAYER */
-    --bg: var(--blue);
-    --text: var(--purple);
-    --timestamps: var(--purple);
-    --border: var(--d-blue);
-    --buttons: var(--l-green);
-    --window: #b7eec8;
-    --bars: var(--d-blue);
-    --squares: var(--orange);
+    --alt: var(--pink);
+    --text-main: var(--black);
+    --text-alt: var(--white);
+    --accent: var(--pink);
+    --accent-hover: var(--purple);
+    --textboxes: var(--white);
 }
 
 html[data-theme="dark"] {
-    --l-green: #98cda9;
-    --d-blue: #073a4b;
-    --orange: #f56958;
-    --blue: #0978a7;
-    --purple: #662d70;
+    --background-img: url('/assets/img/patches.jpg');
 
-    --primary: var(--d-blue);
-    --main: var(--purple);
-    --alt: var(--blue);
-    --text-main: var(--l-green);
-    --text-alt: var(--d-blue);
-    --accent: var(--orange);
-    --accent-hover: var(--l-green);
-    --textboxes: var(--l-green);
+    --pink: #f980d9;
+    --orange: #e75a4b;
+    --yellow: #ffc800;
+    --green: #4a872b;
+    --blue: #282c6d;
+    --purple: #8e08f5;
 
-    /* MUSIC PLAYER */
-    --bg: var(--orange);
-    --text: var(--purple);
-    --timestamps: var(--purple);
-    --border: var(--blue);
-    --buttons: var(--pink);
-    --window: var(--l-green);
-    --bars: var(--l-blue);
-    --squares: var(--d-blue);
+
+    --white: rgb(235, 217, 176);
+    --black: rgb(33, 19, 6);
+    --grey: rgb(77, 77, 77);
+
+    --primary: var(--black);
+    --main: var(--blue);
+    --alt: var(--pink);
+    --text-main: var(--white);
+    --text-alt: var(--green);
+    --accent: var(--pink);
+    --accent-hover: var(--purple);
+    --textboxes: var(--white);
 }
 @font-face {
   font-family: "my-handwriting"; 
@@ -63,17 +59,24 @@ html[data-theme="dark"] {
 }
 
 body{
-  background-color: var(--primary);
-    color: var(--text-main);
-    font-family: "my-handwriting";
-    cursor: url(/assets/icons/blue-pointer.png), auto;
-    
-    padding: 15px;
+  background-image: var(--background-img);
+  background-size: cover;
+  color: var(--text-main);
+  font-family: "my-handwriting";
+  cursor: url(https://dogonline.net/img/toys/cursors/cursor.png), auto;
+  
+  padding: 15px;
+  align-content: center;
+  justify-items: center;
 }
 /*============CLASSES===========*/
 
 a {
   color: var(--accent);
+}
+
+a:hover{
+  cursor: url(https://dogonline.net/img/toys/cursors/cursor-hover.png), auto;
 }
 
 button {
@@ -89,6 +92,7 @@ button {
 
 button:hover {
 	background-color: var(--accent-hover);
+  cursor: url('https://dogonline.net/img/toys/cursors/cursor-hover.png');
 }
 
 .dotted{
@@ -102,31 +106,6 @@ button:hover {
     background-color: var(--main);
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 150px);
-  gap: 10px;
-  
-  background-color: var(--alt);
-  padding: 10px;
-}
-
-.gallery img{
-    width: 100%;
-    object-fit: contain;
-}
-
-.gallery-item{
-    border: solid;
-    border-color: var(--accent);
-    border-style:dashed;
-    margin: 2px;
-}
-
-.hidden{
-  display: none;
-}
-
 iframe{
   border: none;
 }
@@ -136,97 +115,18 @@ iframe{
   padding: 0;
 }
 
-.notif{
-  position: fixed;
-  z-index: 2000;
-  justify-self: center;
-  display: flex;
-}
-
-.overlay{
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.8); /* Black background with opacity */
-}
-
 .textbox{
   background-color: var(--textboxes);
 }
 
-ul{
-  padding-left: 7px;
-  margin: 5px;
-}
-
 /*===============IDS===============*/
 
-#advisory {
-  justify-self: center;
-  margin-top: 10%;
-  max-width: 700px;
-  display: grid;
+#main{
+  background-color: var(--primary);
+  max-width: 860px;
+  min-height: vh - 20px;
+
   padding: 20px;
-
-  background-color:var(--main);
-  color:var(--text-alt);
-  ul{
-    padding-left: 25px;
-  }
-
-  border-style: solid;
-  border-width: 2px; 
-  border-color: var(--alt);
-}
-
-#changelog-textbox{
-  padding: 10px;
-  padding-left: 20px;
-  width: 75%;
-  height: 120px;
-  border: solid;
-  border-color: var(--text);
-  margin: 5px;
-  text-align: left;
-
-  overflow-y: scroll;
-}
-
-#continue {
-  border-radius: 0px;
-  font-size: 30px;
-  color: var(--primary);
-  background: var(--alt);
-}
-
-#enter-site{
-  justify-self: center;
-}
-
-#file {
-  grid-area: main;
-  padding: 50px;
-  overflow: scroll;
-  height: 350px;
-  
-  background-color: var(--main);
-  border-width: 3px;
-  border-radius: 0px 10px 10px 10px;
-}
-
-#guestbook{
-  margin: 2.5%;
-  width: 95%;
-  height: 600px;
-}
-
-#logo{
-  margin: 0;
-  padding: 0;
 }
 
 #my-button{
@@ -258,32 +158,20 @@ ul{
 
 }
 
-#profile-picture{
-  width: 95%;
-  margin-top: 20px;
-  border-radius:5px;
-  border: solid;
-  border-color: var(--text-main);
-  max-width: 500px;
-}
+#webringulist{
+  background-color: var(--main);
+  color: var(--text-alt);
 
-#sitebutton{
-  margin: 20px;
-  padding: 15px;
-  padding-top: 0px;
+  height: auto;
+  overflow-y: scroll;
 
-  border: dashed;
-  border-color: var(--main);
-}
-
-#sitemap{
-  padding:0px 10px 0px 10px ;
-  margin: 10px;
-}
-
-#webrings{
-  .gallery-item{
-    width: auto;
+  table{
+    th,td{
+    border: dashed;
+    border-width: 1px;
+    border-color: var(--accent-hover)
+    }
   }
-  grid-template-columns: repeat(autofill, 120px);
+  
+
 }
