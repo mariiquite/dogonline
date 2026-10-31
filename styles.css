@@ -2,7 +2,7 @@
 
 /* THEME */
 :root, html[data-theme="light"]{
-  --background-img: url('https://dogonline.net/img/themes/nav_day.png');
+  --background-img: url('./assets/dogonline-assets/nav_day.png');
 
     --pink: #e71414;
     --orange: #e75a4b;
@@ -27,7 +27,7 @@
 }
 
 html[data-theme="dark"] {
-    --background-img: url('https://dogonline.net/img/themes/nav_dark.png');
+    --background-img: url('./assets/dogonline-assets/nav_dark.png');
 
     --red: #f73a3a;
     --pink: #f09bac;
@@ -62,7 +62,7 @@ body{
   background-color: var(--main);
   color: var(--text-main);
   font-family: "my-handwriting";
-  cursor: url(https://dogonline.net/img/toys/cursors/cursor.png), auto;
+  cursor: url(./assets/dogonline-assets/cursor.png), auto;
   
   align-content: center;
   justify-items: center;
@@ -87,7 +87,7 @@ a {
 }
 
 a:hover{
-  cursor: url(https://dogonline.net/img/toys/cursors/cursor-hover.png), auto;
+  cursor: url(./assets/dogonline-assets/cursor-hover.png), auto;
 }
 
 button {
@@ -103,7 +103,7 @@ button {
 
 button:hover {
 	background-color: var(--accent-hover);
-  cursor: url(https://dogonline.net/img/toys/cursors/cursor-hover.png);
+  cursor: url(./assets/dogonline-assets/cursor.png);
 }
 
 .dotted{
