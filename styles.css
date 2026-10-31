@@ -2,7 +2,7 @@
 
 /* THEME */
 :root, html[data-theme="light"]{
-  --background-img: url('dogonline/assets/img/plaid.jpg');
+  --background-img: url('./assets/img/plaid.jpg');
 
     --pink: #ff007b;
     --orange: #e75a4b;
@@ -27,7 +27,7 @@
 }
 
 html[data-theme="dark"] {
-    --background-img: url('dogonline/assets/img/patches.jpg');
+    --background-img: url('./assets/img/patches.jpg');
 
     --pink: #f980d9;
     --orange: #e75a4b;
