@@ -137,9 +137,6 @@ iframe{
   border-radius: 15px;
 }
 
-#light-mode-button{
-}
-
 #main{
   background-color: var(--primary);
   max-width: 800px;
